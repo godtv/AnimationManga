@@ -175,7 +175,7 @@ class MyFavoriteViewController: UIViewController,UITableViewDelegate, UITableVie
         
         
         // Do any additional setup after loading the view.
-        
+        setupBackBarButtonItem()
     }
     
     
@@ -185,6 +185,22 @@ class MyFavoriteViewController: UIViewController,UITableViewDelegate, UITableVie
         
     }
 
+    // MARK: - setupBackBarButtonItem
+    private func setupBackBarButtonItem() {
+ 
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "back"), for: .normal)
+        button.addTarget(self, action: #selector(pop(_:)), for: .touchUpInside)
+  
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: button)
+    }
+    @objc func pop(_ sender: Any) {
+        
+        UIView.transition(with: (self.navigationController?.view)!, duration: 0.45, options: .transitionFlipFromLeft, animations: {
+            self.navigationController?.popViewController(animated: true)
+        })
+    }
+    
     /*
      // MARK: - Navigation
      

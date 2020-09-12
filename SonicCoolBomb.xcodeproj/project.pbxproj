@@ -11,6 +11,7 @@
 		CB32D447250861F600800ABB /* TypeMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32D446250861F600800ABB /* TypeMenu.swift */; };
 		CB32D44E2508A56E00800ABB /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = CB32D44D2508A56E00800ABB /* MBProgressHUD */; };
 		CB32D4502508B45700800ABB /* MyFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB32D44F2508B45700800ABB /* MyFavoriteViewController.swift */; };
+		CB3469E5250C8D83003CC05F /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3469E4250C8D82003CC05F /* Animator.swift */; };
 		CB41D57B24EA2AD900876D77 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB41D57A24EA2AD900876D77 /* ItemCell.swift */; };
 		CB41D57E24EA2C7100876D77 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CB41D57D24EA2C7100876D77 /* SDWebImage */; };
 		CBA6E7B72506959F0045A311 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6E7B62506959F0045A311 /* ItemDetailViewController.swift */; };
@@ -46,6 +47,7 @@
 		CB32D446250861F600800ABB /* TypeMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeMenu.swift; sourceTree = "<group>"; };
 		CB32D448250878BB00800ABB /* FTPopOverMenu_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FTPopOverMenu_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB32D44F2508B45700800ABB /* MyFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFavoriteViewController.swift; sourceTree = "<group>"; };
+		CB3469E4250C8D82003CC05F /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		CB41D57A24EA2AD900876D77 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		CB67AE8925060A2D00417137 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA6E7B62506959F0045A311 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB3469E3250C8D82003CC05F /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				CB3469E4250C8D82003CC05F /* Animator.swift */,
+			);
+			path = Animator;
+			sourceTree = "<group>";
+		};
 		CB41D57924EA2A7700876D77 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +159,7 @@
 		CBE0372124D1074100380793 /* SonicCoolBomb */ = {
 			isa = PBXGroup;
 			children = (
+				CB3469E3250C8D82003CC05F /* Animator */,
 				CB67AE8D2506100800417137 /* API */,
 				CB67AE882505FB8400417137 /* Controller */,
 				CB41D57924EA2A7700876D77 /* UI */,
@@ -364,6 +375,7 @@
 				CBE0372524D1074100380793 /* SceneDelegate.swift in Sources */,
 				CBE0374524D1423B00380793 /* ItemModel.swift in Sources */,
 				CBE0373724D10B3000380793 /* ItemViewController.swift in Sources */,
+				CB3469E5250C8D83003CC05F /* Animator.swift in Sources */,
 				CB41D57B24EA2AD900876D77 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

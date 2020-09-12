@@ -214,7 +214,9 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
         vc.typeKey = self.menu.typeButton.titleLabel?.text
         vc.subTypeKey = self.menu.subTypeButton.titleLabel?.text
         vc.view.backgroundColor = .white
-        navigationController?.pushViewController(vc, animated: true)
+        
+         self.navigationController?.pushViewController(vc, animated: true)
+
     }
     
     // MARK: - loadDataForRefresh
@@ -399,8 +401,9 @@ class ItemViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let itemDetailVC: ItemDetailViewController = ItemDetailViewController()
         itemDetailVC.itemUrl = data.url
-        navigationController?.pushViewController(itemDetailVC, animated: true)
         
+         self.navigationController?.pushViewController(itemDetailVC, animated: true)
+
     }
     
     //MARK: -- mainKey

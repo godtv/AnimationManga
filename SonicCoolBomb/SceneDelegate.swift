@@ -11,7 +11,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var animator : Animator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     
@@ -19,13 +19,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-
+            
             let viewController = ItemViewController(nibName: nil, bundle: nil)
             let navigationController = UINavigationController(rootViewController: viewController)
             
             window.backgroundColor = .white
             window.rootViewController = navigationController
             self.window = window
+            window.makeKeyAndVisible()
+            
+            let nav = self.window?.rootViewController as? UINavigationController
+            self.animator = Animator()
+            nav!.delegate = self.animator
+           
             window.makeKeyAndVisible()
         }
         

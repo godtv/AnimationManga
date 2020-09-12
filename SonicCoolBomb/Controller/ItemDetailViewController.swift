@@ -96,13 +96,25 @@ class ItemDetailViewController: UIViewController, UIViewControllerRestoration {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("view did appear, req: \(self.wv.url as Any)")
+         
         
         let b = UIBarButtonItem(title:"WebBack", style:.plain, target:self, action:#selector(goBack))
         self.navigationItem.rightBarButtonItems = [b]
         
-        let url = URL(string: self.itemUrl)!
-        self.wv.load(URLRequest(url:url))
+        if let url = URL(string: self.itemUrl) {
+            self.wv.load(URLRequest(url:url))
+        }
+        else {
+            let alertController = UIAlertController(title: "Failed to load url",
+                message: "",
+                preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "Confirm", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
+        
     }
     
     
