@@ -80,7 +80,9 @@ extension Animator : UIViewControllerAnimatedTransitioning {
         var visibleFirstRowIndexPath: IndexPath = IndexPath(row: 0, section: 0)
         
         let indices = tv.indexPathsForVisibleRows
-        visibleFirstRowIndexPath = indices?.last! as! IndexPath
+//        visibleFirstRowIndexPath = indices?.last! as! IndexPath
+        //visibleFirstRowIndexPath = indices![1]
+        visibleFirstRowIndexPath = indices?[1] as! IndexPath
         
         let r = tv.rectForRow(at: visibleFirstRowIndexPath)
         let r2 = con.convert(r, from: tv)
