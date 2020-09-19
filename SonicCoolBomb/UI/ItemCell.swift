@@ -105,8 +105,8 @@ class ItemCell: UITableViewCell {
         NSLayoutConstraint.activate([
 
             self.cellImgv.leadingAnchor.constraint(equalTo: ctv.layoutMarginsGuide.leadingAnchor),
-            self.cellImgv.topAnchor.constraint(equalTo: ctv.layoutMarginsGuide.topAnchor),
-            self.cellImgv.bottomAnchor.constraint(equalTo: ctv.layoutMarginsGuide.bottomAnchor),
+            self.cellImgv.topAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: ctv.layoutMarginsGuide.topAnchor, multiplier: 1),
+            self.cellImgv.bottomAnchor.constraint(lessThanOrEqualToSystemSpacingBelow: ctv.layoutMarginsGuide.bottomAnchor, multiplier: 1),
             self.cellImgv.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width/3),
             self.cellImgv.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.height/4),
 
